@@ -1,9 +1,9 @@
 'use strict';
 
-myApp.factory('AjaxCall', function($http) {
+myApp.factory('JsonCall', function($http) {
   return {
     get: function(url, params) {
-      return $http.jsonp(url, {
+      return $http.get(url, {
         params: params
       });
     }

@@ -1,0 +1,18 @@
+{
+  "football": {
+    "title": "Football",
+   "path" : "football"
+  },
+  "politics": {
+    "title" : "Politics",
+    "path" : "politics"
+  },
+  "media": {
+    "title" : "Media",
+    "path" : "media"
+  },
+  "science": {
+    "title" : "Science",
+    "path" : "science"
+  }
+}

@@ -3,33 +3,43 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="styles/menu.css"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="myApp">
+</head>
+<body ng-app="myApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+      <!-- Add your site or application content here -->
+<div class="container">
+    <nav ng-controller="HeaderCtrl" ng-include src="'views/header.html'" id="sp-nav" class="menu" role="navigation"></nav>
+    <div id="sp-page">
+    <header class="topcoat-navigation-bar">
+    <a class="menuIcon" href="" ng-click="$spMenu.toggle()"></a>
+    <p class="topcoat-navigation-bar__title">Sports News</p>
+    </header>
+    <div ng-view class="mainContainer"></div>
+    </div>
+</div>
 
     
 
     
-   
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     
@@ -44,16 +54,20 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js"></script>
-        <script src="http://code.angularjs.org/1.1.5/angular-sanitize.min.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/filters/htmlToTex.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/services/ajaxcall.js"></script>
-        
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js"></script>
+    <script src="http://code.angularjs.org/1.1.5/angular-sanitize.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/ajaxcall.js"></script>
+    <script src="scripts/filters/htmlToTex.js"></script>
+    <script src="scripts/controllers/section.js"></script>
+    <script src="scripts/controllers/header.js"></script>
+     <script src="scripts/controllers/ng-mobile-menu.min.js"></script>
+    <script src="scripts/services/json-call.js"></script>
+
+
+    <!-- endbuild -->
 </body>
 </html>
