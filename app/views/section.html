@@ -7,7 +7,7 @@
       <img ng-if="item.fields.thumbnail !== undefined" ng-src="{{item.fields.thumbnail}}"/>
     </div>
     <a class="webTitle" ng-if="item.fullStory === 'true'" ng-href="#/story/{{item.id}}" ng-bind="item.webTitle"></a>
-    <a class="webTitle" ng-if="item.fullStory === undefined" ng-href="{{item.webUrl}}" ng-bind="item.webTitle"><span class="glyphicon glyphicon-link"></span></a>
+    <a class="webTitle" target="_blank" ng-if="item.fullStory === undefined" ng-href="{{item.webUrl}}" ng-bind="item.webTitle"><span class="glyphicon glyphicon-link"></span></a>
   
   </div>
 </div>

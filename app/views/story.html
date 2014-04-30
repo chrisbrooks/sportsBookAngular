@@ -1,6 +1,16 @@
 <div class="story-full">
-  <button type="button" class="btn btn-primary" href back-button></span>Back</button>
   <span ng-if="item.fields.liveBloggingNow === 'true'" class="notice notice--live">Live</span>
-  <h1 ng-bind="data.webTitle" class="story__title"></h1>
-  <div ng-bind-html="data.fields.body | textToHtml">meh</div>
+  <h1 ng-bind="data.webTitle" class="storyTitle"></h1>
+  <h2 ng-bind-html="data.fields.trailText | textToHtml" class="trailText"></h2>
+  <p ng-bind-html="data.webPublicationDate | textToHtml" class="trailText"></p>
+  <div ng-bind-html="data.fields.body | textToHtml" class="storyContent"></div>
+</div>
+
+<div ng:app ng:controller="Scoper">
+    In: {{v.Dt}}  <br />
+    Angular: {{v.Dt | date:'yyyy-MM-dd HH:mm:ss Z'}} <br />
+    In: {{v.sDt}}  <br />
+    Angular: {{v.sDt | date:'yyyy-MM-dd HH:mm:ss Z'}} <br />
+    In: {{v.DDt}}  <br />
+    Angular: {{v.DDt | date:'yyyy-MM-dd HH:mm:ss Z'}} <br />
 </div>

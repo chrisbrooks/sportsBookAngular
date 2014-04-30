@@ -10,6 +10,7 @@ myApp.controller('HeaderCtrl', function($scope, $location, $rootScope, $element,
   $scope.isActive = function(item) {
     if (item.path === $location.path().substring(9)) {
       $scope.pageTitle = item.title;
+      $scope.back = 'back';
       $rootScope.currentSection = item.path;
       return true;
     }

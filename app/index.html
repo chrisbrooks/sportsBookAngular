@@ -26,12 +26,9 @@
 
       <!-- Add your site or application content here -->
 <div class="container">
-    <nav ng-controller="HeaderCtrl" ng-include src="'views/header.html'" id="sp-nav" class="menu" role="navigation"></nav>
+    <nav ng-controller="HeaderCtrl" ng-include src="'views/nav.html'" id="sp-nav" class="menu" role="navigation"></nav>
     <div id="sp-page">
-    <header class="topcoat-navigation-bar">
-    <a class="menuIcon" href="" ng-click="$spMenu.toggle()"></a>
-    <p class="topcoat-navigation-bar__title">Sports News</p>
-    </header>
+    <header ng-controller="HeaderCtrl" ng-include src="'views/header.html'"></header>
     <div ng-view class="mainContainer"></div>
     </div>
 </div>
@@ -60,13 +57,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js"></script>
     <script src="http://code.angularjs.org/1.1.5/angular-sanitize.min.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/directives/backbutton.js"></script>
     <script src="scripts/services/ajaxcall.js"></script>
     <script src="scripts/filters/htmlToTex.js"></script>
     <script src="scripts/controllers/section.js"></script>
+    <script src="scripts/controllers/story.js"></script>
     <script src="scripts/controllers/header.js"></script>
-     <script src="scripts/controllers/ng-mobile-menu.min.js"></script>
+    <script src="scripts/controllers/ng-mobile-menu.min.js"></script>
     <script src="scripts/services/json-call.js"></script>
-
 
     <!-- endbuild -->
 </body>

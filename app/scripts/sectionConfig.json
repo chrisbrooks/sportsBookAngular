@@ -3,6 +3,10 @@
     "title": "Football",
    "path" : "football"
   },
+   "sport": {
+    "title": "Sport",
+   "path" : "sport"
+  },
   "politics": {
     "title" : "Politics",
     "path" : "politics"

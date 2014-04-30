@@ -46,18 +46,27 @@ nav ul li{
     clear: both;
     list-style-type: none;
     background: #2789d0;
-    padding: 14px 15px;
     border-bottom: 1px solid #0d7bc5;
     cursor: pointer;
     background-size: cover;
 }
 nav ul li a{
     color: #ffffff;
-    background: url(../img/arrow.png) no-repeat right;
+    background: url(../images/arrow.png) no-repeat right 10px top 15px;
     background-size: 10px;
     font-size: 14px;
     font-family: sans-serif;
     text-decoration: none;
+    padding: 14px 15px;
+    display: block;
+}
+
+nav ul li.active{
+    box-shadow: none;
+    border-top: 0px;
+    background: #014e86;
+    border-bottom: 1px solid #014e86;
+    margin-top: -1px;
 }
 
 
@@ -122,7 +131,7 @@ header a {
     z-index: 2;
 }
 
-header p {
+header p.title {
     padding: 0;
     margin: 0;
     font: inherit;
@@ -139,6 +148,23 @@ header p {
     text-indent: 
 }
 
+header p.title:first-letter{
+    text-transform: uppercase;
+}
+
+header p.back{
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    margin: 0px;
+    color: #fff;
+    line-height: 43px;
+    background: url(../images/arrowLeft.png) no-repeat left 13px;
+    background-size: 10px;
+    text-indent: 16px;
+}
+
 
 /* ---------------------------------------------------- */
 /*                        Content                       */
@@ -147,6 +173,7 @@ header p {
 
 .mainContainer{
     padding:10px;
+    background:#fff;
 }
 
 
@@ -236,7 +263,6 @@ margin-top:9px;
 text-decoration: none;
 }
 
-
 .story p.sectionTitle, .story p.pubDate, .story p.pubTime{
   font-size: 14px;
   color:#999;
@@ -251,6 +277,161 @@ margin-right:5px;
 .story .webTitle{
   margin-bottom:6px;
 }
+
+
+/*------Story content------*/
+
+h1.storyTitle{
+   font-size: 20px;
+    color: #000;
+    line-height: 25px;
+    margin: 10px 0px 0px 0px;
+    font-weight: 100;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+h2.trailText, .storyContent h2{
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.storyContent p, .storyContent ul li{
+    font-size: 15px;
+    color: #000;
+}
+
+.storyContent .block{
+    clear:both;
+}
+.storyContent h2{
+    padding-top: 20px;
+    border-top: 1px dotted #999;
+    margin-top:30px;
+}
+
+.storyContent h2.block-title{
+    padding-top:0px;
+    border:none;
+    margin-top:0px;
+}
+
+blockquote.quoted{background-image:url('http://static.guim.co.uk/static/b0edb1f196f15ac387d9aa30459b41af0df44c1e/common/styles/grid/../images/quote_red.gif');background-position:top left;background-repeat:no-repeat;margin-left:0;padding-left:45px;float:left;}
+
+.quoted{
+    margin:0px;
+}
+
+
+.storyContent .block-time{
+    padding: 10px 0px;
+    border-top: 1px dotted #999;
+    margin-top: 30px;
+    color: #275BA1;
+}
+
+.storyContent .block-time span.timezone{
+    color:#666;
+}
+
+.storyContent .updated-time{
+    display: none;
+}
+
+.storyContent a{
+    text-decoration: none;
+    color: #275ba2;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+.storyContent a:hover{
+    text-decoration: underline;
+}
+
+.storyContent .gu_advert, .storyContent img{
+    display: none;
+}
+.twitter-tweet{
+position: relative;
+padding: 15px 15px 15px 40px;
+margin: 1em 0 3em;
+background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAVCAYAAABc6S4mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUtJREFUeNq0VcFxwjAQxJ4UQAl+83I6wBWEvPK0qSDpgHEFoQM7T144FdhUgF98cQkqIXvMakYGy8ig7MyNBJJ3pb3zOZz9M170ZLHrotNH1Lk+iP0Zhg0i4l8KUSJy8Cjhw/wz4OYYwx7xKosO5AWGzLLcchTOPOSPFU9SU2yMfDVCroklxA0VDizWvL4NqaOLcuA0NPzTmCMKiIjQ0nJCFzSIROdA1M6WjXLVCnHgvHAUSZDPxrRoO3LVLxbBccINLtACGRPtE60p0Bn17ANKl7sWqCjiC1XPIqq9X1XTM/i9zoGIiGdrDzfpwFXdCBBvHnKRD1WRufiMTS1OX1oF2E0TvoWTK4d57CG409S+HS1TfHNb6/fAII7Z0DL2pYfJLwIk3JBs+UC9r8e+IbrZzdlvUkdLJJE/0szubQwsFsUWocaF1MSfAAMAhYZuDQd7DyMAAAAASUVORK5CYII=') no-repeat 10px 20px #eaeaea;
+margin-bottom: 10px !important;
+border-left: none !important;
+font-size: 12px;
+color: #333;
+border-top:5px solid #68a8df;
+}
+
+.twitter-tweet p{
+  color:#333 !important;
+  margin-bottom:10px !important;
+  margin-top:0px;
+
+}
+
+
+.element-tweet{
+
+background: url(../img/twitter.png);
+background-size: 17px;
+background-repeat: no-repeat;
+background-position: left 88px top 3px;
+margin-bottom: 20px;
+margin:20px 0px 20px 0px;
+}
+
+.twitter time{
+  background: url(../img/twitter.png);
+background-size: 15px;
+background-repeat: no-repeat;
+background-position: right;
+padding-right: 20px;
+}
+
+
+.content-news-full .fullcontent .currentStory .block.wicket
+{
+  border-left:7px solid #2789d0;
+}
+
+.content-news-full .fullcontent .currentStory .block.review
+{
+  border-left:7px solid #83e000;
+}
+
+.content-news-full .fullcontent .currentStory .block.is-summary{
+padding-top: 15px;
+}
+.content-news-full .fullcontent .currentStory .block .published-time{
+margin-bottom: 5px;
+color: #2789d0;
+font-size: 14px;
+}
+.content-news-full .fullcontent .currentStory .block .published-time span{
+  color: #333;
+}
+
+.content-news-full .fullcontent .currentStory .block h2{
+  font-weight: bold;
+color: #000;
+font-size: 15px;
+line-height: 20px;
+margin-bottom: 10px;
+margin-top:0px;
+}
+
+.content-news-full .fullcontent .currentStory .block .updated-time{
+  display: none;
+}
+
+
+
 
 
 
