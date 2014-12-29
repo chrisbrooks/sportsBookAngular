@@ -1,0 +1,7 @@
+<div class="full-story">
+	<span ng-if="item.fields.liveBloggingNow === 'true'" class="notice notice--live">Live</span>
+	<h1 ng-bind="data.webTitle" class="currentHeadline"></h1>
+	<h2 ng-bind-html="data.fields.trailText | textToHtml" class="currentTrailText"></h2>
+	<p class="pub-date">{{data.webPublicationDate | date:'longDate'}} {{data.webPublicationDate | date:'shortTime'}}</p>
+	<div ng-bind-html="data.fields.body | textToHtml" class="currentStory"></div>
+</div>

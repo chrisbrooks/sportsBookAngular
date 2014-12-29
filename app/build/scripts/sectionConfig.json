@@ -1,0 +1,34 @@
+{
+	"news": {
+		"title": "Top Stories",
+		"path": "news"
+	},
+	"sport": {
+		"title": "Sport",
+		"path": "sport"
+	},
+	"uk-news": {
+		"title": "UK",
+		"path": "uk-news"
+	},
+	"world": {
+		"title": "World",
+		"path": "world"
+	},
+	"technology": {
+		"title": "Technology",
+		"path": "technology"
+	},
+	"art": {
+		"title": "Art & Design",
+		"path": "artanddesign"
+	},
+	"Film": {
+		"title": "Film",
+		"path": "film"
+	},
+	"business": {
+		"title": "Business",
+		"path": "business"
+	}
+}

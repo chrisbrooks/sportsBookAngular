@@ -1,0 +1,40 @@
+<section class="content-wrapper">
+	<div class="news-story">
+		<div ng-repeat="item in data.results" class="story">
+			<div class="head-container">
+				<a ng-if="item.fullStory === 'true'" ui-sref="story({ id: item.id })">
+					<div class="image-container">
+						<span ng-if="item.fields.liveBloggingNow === 'true'" class="live-blogging">Live</span>
+						<!--<span ng-if="item.fullStory === 'true'" class="no-story-error">Full Story</span>-->
+						<span ng-if="item.fullStory === undefined" class="no-story-error">External Link</span>
+						<img ng-if="item.fields.thumbnail !== undefined" ng-src="{{item.fields.thumbnail}}"/>
+						<img ng-if="item.fields.thumbnail === undefined" class="no-pic" src="../images/noPic.jpg"/>
+					</div>
+					<div class="content-container">
+						<p class="web-title" ng-bind="item.webTitle" ng-if="item.fullStory === 'true'"></p>
+						<p class="web-title" target="_blank" ng-bind="item.webTitle" ng-if="item.fullStory === undefined"></p>
+						<p class="trailing-content" ng-bind="item.fields.trailText | htmlToText"></p>
+						<p class="pub-date">{{item.webPublicationDate | date:'longDate'}}</p>
+						<p class="pub-time">{{item.webPublicationDate | date:'shortTime'}}</p>
+					</div>
+				</a>
+				<a ng-if="item.fullStory === undefined" ng-href="{{item.webUrl}}">
+					<div class="image-container">
+						<span ng-if="item.fields.liveBloggingNow === 'true'" class="live-blogging">Live</span>
+						<!--<span ng-if="item.fullStory === 'true'" class="no-story-error">Full Story</span>-->
+						<span ng-if="item.fullStory === undefined" class="no-story-error">External Link</span>
+						<img ng-if="item.fields.thumbnail !== undefined" ng-src="{{item.fields.thumbnail}}"/>
+					</div>
+					<div class="content-container">
+						<p class="web-title" ng-bind="item.webTitle" ng-if="item.fullStory === 'true'"></p>
+						<p class="web-title" target="_blank" ng-bind="item.webTitle" ng-if="item.fullStory === undefined"></p>
+						<p class="trailing-content" ng-bind="item.fields.trailText | htmlToText"></p>
+						<p class="pub-date">{{item.webPublicationDate | date:'longDate'}}</p>
+						<p class="pub-time">{{item.webPublicationDate | date:'shortTime'}}</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+

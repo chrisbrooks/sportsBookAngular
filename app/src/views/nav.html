@@ -1,0 +1,6 @@
+<ul class="tabs">
+	<li ng-repeat="section in sections" ng-class="{active: isActive(section), dropdown:section.subcategories !== undefined}">
+		<a ng-if="section.subcategories !== undefined" ng-click="click()">{{section.title}}</a>
+		<a ng-if="section.subcategories === undefined" ng-href="#/section/{{section.path}}" ng-click="click()">{{section.title}}</a>
+	</li>
+</ul>

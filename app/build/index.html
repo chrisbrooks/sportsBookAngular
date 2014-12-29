@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta content="width=device-width, user-scalable=no" name="viewport">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="styles/app.css"/>
+	</head>
+	<body ng-app="myApp" class="{{$state.current.name}}">
+		<header ng-controller="HeaderCtrl" ng-include src="'views/header.html'" class="header"></header>
+		<nav ng-controller="HeaderCtrl" ng-include src="'views/nav.html'" role="navigation" ng-class="{'active': active}"></nav>
+		<div class="main-new" ng-class="{'active': active}">
+			<div ui-view class="main-container"></div>
+		</div>
+		<div class="loading" style="color:#000" ng-class="{'loaded': loading}">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-animate.js"></script>
+		<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+		<script src="http://code.angularjs.org/1.1.5/angular-sanitize.min.js"></script>
+		<script src="http://platform.twitter.com/widgets.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/directives/backbutton.js"></script>
+		<script src="scripts/services/ajaxcall.js"></script>
+		<script src="scripts/filters/htmlToTex.js"></script>
+		<script src="scripts/controllers/section.js"></script>
+		<script src="scripts/controllers/story.js"></script>
+		<script src="scripts/controllers/header.js"></script>
+		<script src="scripts/services/json-call.js"></script>
+	</body>
+</html>
