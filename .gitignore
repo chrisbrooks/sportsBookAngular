@@ -1,5 +1,13 @@
-node_modules
-dist
-.tmp
-.sass-cache
-app/bower_components
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# SASS generated files #
+######################
+.sass-cache/
