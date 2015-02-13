@@ -4,6 +4,7 @@ myApp.controller('StoryCtrl', function($scope, AjaxCall, $stateParams,$rootScope
 		'api-key': '5vk4jfy7myw4rdgfhg2hx7tn',
 		callback: 'JSON_CALLBACK'
 	}).then(function(response) {
+		console.log($stateParams.id);
 		$scope.data = response.data.response.content;
 	}).finally(function(response){
 		setTimeout(function(){

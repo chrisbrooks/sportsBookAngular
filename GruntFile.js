@@ -151,9 +151,9 @@ module.exports = function(grunt) {
 					keepalive: false,
 					livereload: true,
 					open: {
-						target: 'http://localhost:8000'
+						target: 'http://localhost:8001'
 					},
-					port: 8000,
+					port: 8001,
 					middleware: function(connect, options, middlewares) {
 
 						middlewares.unshift(function (req, res, next) {
