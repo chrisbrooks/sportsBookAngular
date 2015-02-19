@@ -1,6 +1,6 @@
-Grunt-Template
+SportsBook Angular
 ==============
 
 <h2>About</h2>
 
-Grunt Template is simply a pre setup grunt file and folder structure that is ready to use on a project. There is a number of installed fundamental grunt tasks installed which will help with rapid development.
+Angular news application created with the guardian api. This app displays different catagories of news and includes the full articles.
